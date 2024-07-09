@@ -194,7 +194,6 @@ function calculateAge() {
 
 
     if (anyErrorDisplayed) {
-        console.log('I AM CALCULATEAGE IF 1')
         dispYear.textContent = '--';
         dispMon.textContent = '--';
         dispDays.textContent = '--';
@@ -207,7 +206,6 @@ function calculateAge() {
 
     //IF calcD IS NEGATIVE
     if (calcDay < 0) {
-        console.log('I AM CALCULATEAGE IF 2')
         calcMonth--;
         const previousMonth = currMon - 1;
         const NoOfDays = new Date(year.value, previousMonth, 0).getDate();
