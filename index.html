@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="dates">
+        <div class="days date">
+          <label for="day" class="labels">Day</label>
+          <input type="text" name="day" id="day" class="input" placeholder="DD">
+          <small class="error all-err">This field is required</small>
+          <small class="err all-err" id="error-day">Must be a valid day</small>
+          <small class="err valid all-err" id="error-date">Must be a valid date</small>
+        </div>
+
+        <div class="months date">
+          <label for="mon" class="labels">Month</label>
+          <input type="text" name="mon" id="mon" class="input" placeholder="MM">
+          <small class="error all-err">This field is required</small>
+          <small class="err valid all-err" id="error-mon">Must be a valid month</small>
+        </div>
+
+        <div class="years date">
+          <label for="year" class="labels">Year</label>
+          <input type="text" name="year" id="year" class="input" placeholder="YYYY">
+          <small class="error all-err">This field is required</small>
+          <small class="err all-err" id="error-year">Must be in the past</small>
+          <small class="err valid all-err" id="err-yr">Must be a valid year</small>
+        </div>
+      </div>
+
+      <div class="separator">
+        <hr>
+        <button id="age">
+          <img src="assets/images/icon-arrow.svg" id="arrow" alt="">
+        </button>
+      </div>
+
+      <div class="display-age">
+        <h1>
+          <span id="d-year">--</span>
+          years
+        </h1>
+
+        <h1>
+          <span id="d-mon">--</span>
+          months
+        </h1>
+
+        <h1>
+          <span id="d-days">--</span>
+          days
+        </h1>
+      </div>
+    </div>
+  </main>
+
+  <script src="script2.js"></script>
+
+</body>
+
+</html>

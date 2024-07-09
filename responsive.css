@@ -1,0 +1,54 @@
+@media screen and (width<=344px) {
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (width > 344px) and (width<=375px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (width>=385px) {
+    .years {
+        width: 50%;
+        margin: auto;
+    }
+
+    .dates {
+        grid-template-areas: 'days months' 'years years';
+        grid-template-columns: 46% 46%;
+    }
+}
+
+@media screen and (width>=680px) {
+    .container {
+        width: 100%;
+        padding: 50px;
+        border-bottom-right-radius: 205px;
+    }
+
+    .years {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .dates {
+        grid-template-areas: 'days months years';
+        grid-template-columns: 30% 30% 30%;
+    }
+
+    .input {
+        width: 165px;
+    }
+
+    #age {
+        right: 0;
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+}
