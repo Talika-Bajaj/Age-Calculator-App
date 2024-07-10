@@ -1,3 +1,4 @@
+
 const errors = document.getElementsByClassName('error');
 const validErrors = document.querySelectorAll('.valid');
 const inputs = document.querySelectorAll('.input');
@@ -67,7 +68,11 @@ function checkValues() {
     var numbers = /^[0-9]+$/;
 
     inputs.forEach((input, index) => {
-        if (input.value.length > 0) {
+        if (input.value !== '') {
+            if (input.value.length == 1) {
+                displayError(validErrors[index], labels[index], input);
+                return;
+            }
             if (input.value.match(numbers)) {
                 resetErrors(validErrors[index], labels[index], input)
                 checkYear();
@@ -137,6 +142,8 @@ function checkDate(value) {
             displayError(errorDate, labels[index], input)
         } else if (value == '02' && (day.value == 30 || day.value == 31)) {
             displayError(errorDate, labels[index], input)
+        } else {
+            errorDate.style.display = 'none';
         }
     })
 
